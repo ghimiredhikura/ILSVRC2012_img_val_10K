@@ -1,0 +1,1 @@
+python generate_labels.py --ilsvrc_devkit_dir=./ --validation_labels_output=validataion_labels.txt
