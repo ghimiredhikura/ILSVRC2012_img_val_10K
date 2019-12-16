@@ -1,5 +1,7 @@
-# ILSVRC2012 ImageNet 10K Validataion Images and devkit for tflite Evaluation in Edge Devices [example: Pi3/4]
+# ILSVRC2012 ImageNet 10K Validataion Images and devkit
 
+ILSVRC2012 ImageNet 10K Validataion Images and devkit for tflite Evaluation in Edge Devices [example: Pi3/4]  
+  
 ```
 git clone https://github.com/ghimiredhikura/ILSVRC2012_img_val_10K
 cd ILSVRC2012_img_val_10K
