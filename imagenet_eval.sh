@@ -2,10 +2,10 @@
 cd tensorflow
 
 IMAGENET_IMAGES_DIR="../ILSVRC2012_img_val_10K/"
-VALIDATION_LABELS="../validataion_labels.txt"
+VALIDATION_LABELS="../validataion_labels_10K.txt"
 MODEL_LABELS_TXT="../labels.txt"
 
-bazel-1.1.0 run -c opt \
+bazel run -c opt \
   --cxxopt='--std=c++11' \
   -- \
   //tensorflow/lite/tools/accuracy/ilsvrc:imagenet_accuracy_eval \
