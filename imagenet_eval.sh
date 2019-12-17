@@ -14,4 +14,4 @@ bazel run -c opt \
   --ground_truth_labels=${VALIDATION_LABELS} \
   --model_output_labels=${MODEL_LABELS_TXT} \
   --output_file_path=accuracy_output.txt \
-  --num_images=0 # Run on all images.
+  --num_images=100 # Run on all images.
