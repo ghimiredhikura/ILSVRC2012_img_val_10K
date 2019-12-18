@@ -5,23 +5,23 @@ ILSVRC2012 ImageNet 10K Validataion Images and devkit for tflite Evaluation in E
 ```
 git clone https://github.com/ghimiredhikura/ILSVRC2012_img_val_10K
 cd ILSVRC2012_img_val_10K
+unzip mobilenet_v2_imagenet.zip
+rm -rf mobilenet_v2_imagenet.zip
 ```
 
+Download ILSVRC2012 validataion images - 10K images 
 ```
-cd ILSVRC2012_img_val_10K
-source generate_validation_labels.sh
-mv validataion_labels.txt ../validataion_labels.txt
-cd ../
+./scripts/download_ILSVRC2012_img_val_10K.sh
 ```
 
+Now use your prediction dump file generated using your favorite inference engine to get top1 and top5 accuracies. Here we provide an example imagenet dump file on 10K images using [opencv-4.1.1 dnn classification engine](https://gitlab.com/bonseyes/misc/devplatform-rasberrypi3/blob/master/benchmark/frameworks/opencv-4/benchmark/benchmark-nviso/benchmark_imagenet_eval.cpp) with mobilenetv2 caffe model. 
 ```
-download_ILSVRC2012_img_val_10K.sh
+source run_nvisoeval.sh mobilenet_v2_imagenet.txt
 ```
 
-```
-git clone https://github.com/tensorflow/tensorflow
-cd tensorflow
-git reset --hard 64c3d382cadf7bbe8e7e99884bede8284ff67f56 # tensorflow-2.0.0
-cd ../
-source imagenet_eval.sh
-```
+## Example Result
+
+| **Inference Engine**| **Model**  	  | **Eval Images** |  **RaspberryPi4B-armv7l**| | **RaspberryPi4B-aarch64**  | |
+|------------  | ------------- | :---------: | :---------:   | :---------: |:---------: |:---------: |
+|      	              |               |    | Top1 Accuracy | Top5 Accuracy | Top1 Accuracy | Top5 Accuracy| 
+| **OPENCV-4 1.1**    | mobilenetv2-224x224| 10000 |   62.32 %   | 84.04 %       |               |              |
