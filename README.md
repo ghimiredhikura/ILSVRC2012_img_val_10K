@@ -1,6 +1,6 @@
-# ILSVRC2012 ImageNet 10K Validataion Images and devkit
+# ILSVRC2012 ImageNet 10K Validataion Images Accuracy Benchmarking
 
-ILSVRC2012 ImageNet 10K Validataion Images and devkit for tflite Evaluation in Edge Devices [example: Pi3/4]  
+ILSVRC2012 ImageNet 10K Validataion Images and devkit for Top-1 & Top-5 Accuracy Benchmarking in Edge Devices [example: RPi3/4]  
   
 ```
 git clone https://github.com/ghimiredhikura/ILSVRC2012_img_val_10K
