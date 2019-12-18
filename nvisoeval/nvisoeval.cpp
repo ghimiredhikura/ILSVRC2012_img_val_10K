@@ -130,7 +130,7 @@ int main(int argc, char* argv[])
         vector<string> values;
         string v;        
         while(getline(linestream, v, ':')) {
-            values.push_back(v);
+            values.push_back(trim(v));
         }
         if(values.size() != 2) 
             break;
