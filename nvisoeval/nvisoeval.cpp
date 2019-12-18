@@ -129,7 +129,7 @@ int main(int argc, char* argv[])
         stringstream linestream(line);
         vector<string> values;
         string v;        
-        while(getline(linestream, v, ":")) {
+        while(getline(linestream, v, ':')) {
             values.push_back(v);
         }
         if(values.size() != 2) 
@@ -142,7 +142,7 @@ int main(int argc, char* argv[])
         stringstream linestream2(values[1]);
         std::vector<pred> m_pred;
         int index = 0;
-        while(getline(linestream2, v, " ")) {
+        while(getline(linestream2, v, ' ')) {
             pred p;
             p.index = index;
             p.conf = atof(trim(v));
