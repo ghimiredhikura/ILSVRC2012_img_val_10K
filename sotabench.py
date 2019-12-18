@@ -13,6 +13,6 @@ with open('mobilenet_v2_imagenet.txt', 'r') as file:
         preds = preds.lstrip().rstrip()
         preds = np.fromstring(preds, dtype=float, sep=' ')
         
-        evaluator.add(dict(zip(image_id, list(pred))))
+        evaluater.add(dict(zip(image_id, list(pred))))
 
-    evaluator.get_results()
+    evaluater.get_results()
