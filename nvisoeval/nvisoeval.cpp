@@ -135,7 +135,7 @@ int main(int argc, char* argv[])
         if(values.size() != 2) 
             break;
         
-        cout << "Image: " << values[0] << endl;
+        cout << "Image: " << values[0];
 
         findAndReplaceAll(values[0], "ILSVRC2012_val_", "");
         int image_id = std::stoi(values[0]) - 1;
@@ -157,8 +157,8 @@ int main(int argc, char* argv[])
         }
 	    std::sort(m_pred.begin(), m_pred.end(), greater_than_key());
         
-        cout << "Top Pred: " << classes[m_pred[0].index] << ", " << m_pred[0].conf << endl;
-        cout << "GT: " << ground_truth_labels[image_id] << endl;
+        cout << ", Pred: " << classes[m_pred[0].index] << ", " << m_pred[0].conf;
+        cout << ", GT: " << ground_truth_labels[image_id] << endl;
         if(ground_truth_labels[image_id] == classes[m_pred[0].index])
             top1_acc++;
 
@@ -169,7 +169,8 @@ int main(int argc, char* argv[])
         }
 
         total_count++;
-        break;
+        if(total_count == 10)
+            break;
     }
 
     cout << "Top 1 Accuracy: " << top1_acc/total_count * 100 << "'%'" << endl;
