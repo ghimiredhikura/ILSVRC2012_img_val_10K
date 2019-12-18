@@ -10,6 +10,7 @@ with open('mobilenet_v2_imagenet.txt', 'r') as file:
     lines = file.readlines()
     for line in lines:
         image_id, preds = line.split(":")
+        image_id = image_id.rstrip().lstrip()
         preds = preds.lstrip().rstrip()
         preds = np.fromstring(preds, dtype=float, sep=' ')
         
