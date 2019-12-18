@@ -146,7 +146,6 @@ int main(int argc, char* argv[])
         std::vector<pred> m_pred;
         int index = 0;
         while(getline(linestream2, v, ' ')) {
-            cout << "v: " << v << endl;
             pred p;
             p.index = index;
             p.conf = std::stof(v);
