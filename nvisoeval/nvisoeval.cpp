@@ -138,7 +138,7 @@ int main(int argc, char* argv[])
         cout << "Image: " << values[0] << endl;
 
         findAndReplaceAll(values[0], "ILSVRC2012_val_", "");
-        int image_id = atoi(values[0]);
+        int image_id = std::stoi(values[0]);
         
         stringstream linestream2(values[1]);
         std::vector<pred> m_pred;
@@ -146,7 +146,7 @@ int main(int argc, char* argv[])
         while(getline(linestream2, v, ' ')) {
             pred p;
             p.index = index;
-            p.conf = atof(v.c_str());
+            p.conf = std::stof(v);
             m_pred.push_back(p);
             index++;
         }
