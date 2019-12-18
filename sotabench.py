@@ -7,10 +7,10 @@ evaluater = ImageNetEvaluator(
             paper_arxiv_id='1801.04381')
 
 with open('mobilenet_v2_imagenet.txt', 'r') as file:
-    lines = readlines(file)
+    lines = file.readlines()
     for line in lines:
         image_id, preds = line.split(":")
         preds = preds.lstrip().rstrip()
-        preds = np.asarray(preds)
+        preds = np.fromstring(preds, dtype=float, sep=' ')
         print(image_id, preds)
-    break
+        break
