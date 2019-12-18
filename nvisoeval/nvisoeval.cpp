@@ -137,7 +137,7 @@ int main(int argc, char* argv[])
         
         cout << "Image: " << values[0] << endl;
 
-        int image_id = atoi(findAndReplaceAll(trim(values[0]), "ILSVRC2012_val_", "")));
+        int image_id = atoi(findAndReplaceAll(values[0], "ILSVRC2012_val_", "")));
         
         stringstream linestream2(values[1]);
         std::vector<pred> m_pred;
@@ -145,7 +145,7 @@ int main(int argc, char* argv[])
         while(getline(linestream2, v, ' ')) {
             pred p;
             p.index = index;
-            p.conf = atof(v);
+            p.conf = atof(v.c_str());
             m_pred.push_back(p);
             index++;
         }
