@@ -145,7 +145,7 @@ int main(int argc, char* argv[])
         while(getline(linestream2, v, ' ')) {
             pred p;
             p.index = index;
-            p.conf = atof(trim(v));
+            p.conf = atof(v);
             m_pred.push_back(p);
             index++;
         }
