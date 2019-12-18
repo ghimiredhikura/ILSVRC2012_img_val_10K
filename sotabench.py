@@ -6,7 +6,7 @@ evaluater = ImageNetEvaluator(
             model_name='MobileNet-v2',
             paper_arxiv_id='1801.04381')
 
-with open('mobilenetv2_imagenet.txt', 'r') as file:
+with open('mobilenet_v2_imagenet.txt', 'r') as file:
     lines = readlines(file)
     for line in lines:
         image_id, preds = line.split(":")
