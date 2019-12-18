@@ -12,5 +12,7 @@ with open('mobilenet_v2_imagenet.txt', 'r') as file:
         image_id, preds = line.split(":")
         preds = preds.lstrip().rstrip()
         preds = np.fromstring(preds, dtype=float, sep=' ')
-        print(image_id, preds)
-        break
+        
+        evaluator.add(dict(zip(image_id, list(pred))))
+
+    evaluator.get_results()
