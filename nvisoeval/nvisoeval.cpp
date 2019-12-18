@@ -169,10 +169,11 @@ int main(int argc, char* argv[])
         }
 
         total_count++;
-        if(total_count == 10)
-            break;
+        //if(total_count == 10)
+        //    break;
     }
 
-    cout << "Top 1 Accuracy: " << top1_acc/total_count * 100 << "'%'" << endl;
-    cout << "Top 5 Accuracy: " << top5_acc/total_count * 100 << "'%'" << endl;
+    cout << "Total Images used for evaluation: " << total_count << endl;
+    cout << "Top 1 Accuracy: " << top1_acc/total_count * 100 << "%" << endl;
+    cout << "Top 5 Accuracy: " << top5_acc/total_count * 100 << "%" << endl;
 }
