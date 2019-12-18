@@ -1,6 +1,4 @@
 
-g++ nvisoeval/nvisoeval.cpp -o nvisoeval
+g++ nvisoeval/nvisoeval.cpp -o nviso_imagenet_eval
 
-./nvisoeval mobilenet_v2_imagenet.txt data/ground_truth_labels_10K.txt data/labels.txt
-
-rm -rf nvisoeval
+./nviso_imagenet_eval mobilenet_v2_imagenet.txt data/ground_truth_labels_10K.txt data/labels.txt
