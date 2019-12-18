@@ -140,8 +140,6 @@ int main(int argc, char* argv[])
         findAndReplaceAll(values[0], "ILSVRC2012_val_", "");
         int image_id = std::stoi(values[0]);
         
-        cout << values[1] << endl;
-
         stringstream linestream2(values[1]);
         std::vector<pred> m_pred;
         int index = 0;
@@ -160,6 +158,7 @@ int main(int argc, char* argv[])
 	    std::sort(m_pred.begin(), m_pred.end(), greater_than_key());
         
         cout << "Top Pred: " << classes[m_pred[0].index] << ", " << m_pred[0].conf << endl;
+        cout << "GT: " << ground_truth_labels[image_id] << endl;
         if(ground_truth_labels[image_id] == classes[m_pred[0].index])
             top1_acc++;
 
