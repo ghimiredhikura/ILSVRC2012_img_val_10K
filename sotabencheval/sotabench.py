@@ -18,6 +18,7 @@ with open('mobilenet_v2_imagenet.txt', 'r') as file:
         image_ids.append(image_id)
         preds.append(pred)
 
-    evaluater.add(dict(zip(image_ids, preds)))
+    #preds=np.asarray(preds)
+    evaluater.add(dict(zip(image_ids, list(preds))))
 
     evaluater.get_results()
