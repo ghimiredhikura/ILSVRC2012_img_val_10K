@@ -137,7 +137,8 @@ int main(int argc, char* argv[])
         
         cout << "Image: " << values[0] << endl;
 
-        int image_id = atoi(findAndReplaceAll(values[0], "ILSVRC2012_val_", "").c_str());
+        findAndReplaceAll(values[0], "ILSVRC2012_val_", "");
+        int image_id = atoi(values[0]);
         
         stringstream linestream2(values[1]);
         std::vector<pred> m_pred;
