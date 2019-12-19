@@ -25,7 +25,7 @@ source run_nvisoeval.sh mobilenet_v2_imagenet.txt
 
 ## **Results**
 
-| **Inference Engine**| **Model**  	  | **Eval Images** |  **RaspberryPi4B-armv7l**| **RaspberryPi4B-armv7l** | **RaspberryPi4B-aarch64**  | **RaspberryPi4B-aarch64** |
+| **Inference Engine**| **Model**  	  | **Valid Images** |  **RaspberryPi4B-armv7l**| **RaspberryPi4B-armv7l** | **RaspberryPi4B-aarch64**  | **RaspberryPi4B-aarch64** |
 |------------  | ------------- | :---------: | :---------:   | :---------: |:---------: |:---------: |
 |      	              |               |    | Top-1 Accuracy | Top-5 Accuracy | Top-1 Accuracy | Top-5 Accuracy| 
-| OpenCV-4 1.1    | mobilenet_v2-224x224| 10000 |   62.32 %   | 84.04 %       |               |              |
+| OpenCV-4 1.1    | mobilenet_v2-224x224| 10K |   62.32 %   | 84.04 %       |               |              |
