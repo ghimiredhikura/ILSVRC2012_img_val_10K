@@ -1,4 +1,4 @@
-# ILSVRC2012 ImageNet 10K Validataion Images Accuracy Benchmarking
+## ILSVRC2012 ImageNet Accuracy Benchmarking on 10K Validataion Images
 
 ILSVRC2012 ImageNet 10K Validataion Images and devkit for Top-1 & Top-5 Accuracy Benchmarking in Edge Devices [example: RPi3/4]  
   
