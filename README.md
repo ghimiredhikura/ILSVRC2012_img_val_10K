@@ -27,7 +27,7 @@ source run_nvisoeval.sh mobilenet_v2_imagenet.txt
 ## **Results**
 
 | **Inference Engine**| **Model**  	  | **Valid Images** |  **RaspberryPi4B-armv7l**| **RaspberryPi4B-armv7l** | **RaspberryPi4B-aarch64**  | **RaspberryPi4B-aarch64** |
-|------------  | ------------- | :---------: | :---------:   | :---------: |:---------: |:---------: |
+|------------------- | ------------- | :---------: | :---------:   | :---------: |:---------: |:---------: |
 |      	              |               |    | Top-1 Accuracy | Top-5 Accuracy | Top-1 Accuracy | Top-5 Accuracy| 
-| OpenCV-4 1.1    | [Mobilenet_V2_1.0_224](https://github.com/shicai/MobileNet-Caffe)| 10K |   62.32 %   | 84.04 %       |               |              |
+| opencv-4.1.1    | [Mobilenet_V2_1.0_224_caffe](https://github.com/shicai/MobileNet-Caffe)| 10K |   62.32 %   | 84.04 %       |               |              |
 | tflite-2.0.0    | [Mobilenet_V2_1.0_224_tflitehm](https://storage.googleapis.com/download.tensorflow.org/models/tflite_11_05_08/mobilenet_v2_1.0_224.tgz)| 10K |   71.06 %   | 90.10 %       |               |              |
